@@ -136,6 +136,12 @@
             border-color: var(--pop-cyan);
             background: rgba(56, 189, 248, 0.03);
         }
+
+        /* お問い合わせセクションの装飾 */
+        .contact-box {
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(4, 11, 20, 1) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -152,6 +158,7 @@
                     <a href="#works" class="nav-link">Works</a>
                     <a href="#pricing" class="nav-link">Pricing</a>
                     <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="px-4 py-2 border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400 hover:text-black transition-all">Contact</a>
                 </div>
                 <div class="md:hidden text-white text-xl">
                     <i class="fas fa-bars"></i>
@@ -279,9 +286,9 @@
                         <li><i class="fas fa-check text-[8px] mr-2 text-cyan-400"></i>BGM・効果音の挿入</li>
                         <li><i class="fas fa-check text-[8px] mr-2 text-cyan-400"></i>1分以内の尺に対応</li>
                     </ul>
-                    <div class="py-4 border border-white/10 text-white font-bold rounded-xl tracking-[0.2em] text-[10px] uppercase text-center cursor-default">
-                        penazul404@gmail.com
-                    </div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJOLl0Z8akjgbuAFRSZh8NExo4lsdqf15-4D1jyLue8EOW7A/viewform?usp=dialog" target="_blank" class="inline-block w-full py-4 border border-white/10 text-white font-bold rounded-xl hover:bg-white hover:text-slate-950 transition-all tracking-[0.2em] text-[10px] uppercase text-center">
+                        依頼を相談する
+                    </a>
                 </div>
 
                 <!-- まとめパック -->
@@ -310,9 +317,9 @@
                             ※6本ご依頼されても, 3本セット割引は一回しか適応されません。
                         </li>
                     </ul>
-                    <div class="py-4 bg-cyan-400 text-slate-950 font-black rounded-xl tracking-[0.2em] text-[10px] uppercase shadow-lg shadow-cyan-400/10 text-center cursor-default">
-                        penazul404@gmail.com
-                    </div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJOLl0Z8akjgbuAFRSZh8NExo4lsdqf15-4D1jyLue8EOW7A/viewform?usp=dialog" target="_blank" class="inline-block w-full py-4 bg-cyan-400 text-slate-950 font-black rounded-xl hover:bg-white transition-all tracking-[0.2em] text-[10px] uppercase shadow-lg shadow-cyan-400/10 text-center">
+                        パックで依頼する
+                    </a>
                 </div>
             </div>
         </div>
@@ -383,6 +390,35 @@
                         Open Portfolio <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 依頼セクション (New Contact Section) -->
+    <section id="contact" class="py-32 bg-[#040b14]">
+        <div class="max-w-4xl mx-auto px-6 fade-in">
+            <div class="contact-box rounded-[2rem] p-12 text-center relative overflow-hidden">
+                <!-- 装飾用アイコン -->
+                <div class="absolute -top-10 -right-10 text-cyan-400/10 text-9xl">
+                    <i class="fas fa-paper-plane"></i>
+                </div>
+                
+                <h2 class="text-cyan-400 text-xs font-bold tracking-[0.5em] mb-6 block uppercase font-serif">Contact</h2>
+                <p class="font-serif text-4xl md:text-5xl text-white font-bold tracking-widest mb-8">依頼はこちらから</p>
+                <p class="text-slate-400 text-lg mb-12 font-light leading-relaxed">
+                    映像制作のご相談、お見積り、ご質問など<br class="hidden md:block">
+                    以下のGoogleフォームよりお気軽にお送りください。
+                </p>
+                
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJOLl0Z8akjgbuAFRSZh8NExo4lsdqf15-4D1jyLue8EOW7A/viewform?usp=dialog" target="_blank" 
+                   class="btn-glow inline-flex items-center gap-4 px-16 py-6 bg-cyan-400 text-slate-950 font-black tracking-[0.2em] rounded-full hover:bg-white transition-all transform active:scale-95">
+                    <i class="fas fa-edit"></i>
+                    GOOGLE FORM を開く
+                </a>
+                
+                <p class="mt-10 text-[10px] text-slate-500 tracking-[0.2em] uppercase">
+                    Usually respond within 24-48 hours.
+                </p>
             </div>
         </div>
     </section>
