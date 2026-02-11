@@ -126,6 +126,16 @@
             letter-spacing: 0.1em;
             box-shadow: 0 4px 15px rgba(0, 255, 255, 0.4);
         }
+
+        /* 実績カード */
+        .work-item {
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        .work-item:hover {
+            border-color: var(--pop-cyan);
+            background: rgba(56, 189, 248, 0.03);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -142,7 +152,6 @@
                     <a href="#works" class="nav-link">Works</a>
                     <a href="#pricing" class="nav-link">Pricing</a>
                     <a href="#about" class="nav-link">About</a>
-                    <a href="#contact" class="px-6 py-2 border border-cyan-400 text-cyan-400 rounded-full hover:bg-cyan-400 hover:text-slate-950 transition-all duration-300">Contact</a>
                 </div>
                 <div class="md:hidden text-white text-xl">
                     <i class="fas fa-bars"></i>
@@ -214,22 +223,31 @@
                 <p class="font-serif text-4xl md:text-5xl text-white font-bold tracking-widest">作成可能例</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Streamer 切り抜き -->
-                <div class="bg-[#0a1628] rounded-3xl overflow-hidden border border-white/5 p-8 fade-in hover:border-cyan-400/30 transition-all group">
-                    <div class="h-64 rounded-2xl mb-8 overflow-hidden relative">
+                <div class="bg-[#0a1628] rounded-3xl overflow-hidden border border-white/5 p-6 fade-in hover:border-cyan-400/30 transition-all group">
+                    <div class="h-48 rounded-2xl mb-6 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-4 tracking-tight">Streamer 切り抜き</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6 font-light">ゲーム実況や雑談配信のハイライト。エンタメ性を最大化したテロップ演出で新規ファンを獲得します。</p>
+                    <h3 class="text-xl font-bold text-white mb-3 tracking-tight">Streamer 切り抜き</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed font-light">ゲーム実況や雑談配信のハイライト。エンタメ性を最大化したテロップ演出で新規ファンを獲得します。</p>
                 </div>
                 <!-- Vtuber 切り抜き -->
-                <div class="bg-[#0a1628] rounded-3xl overflow-hidden border border-white/5 p-8 fade-in hover:border-cyan-400/30 transition-all group" style="transition-delay: 0.2s">
-                    <div class="h-64 rounded-2xl mb-8 overflow-hidden relative">
+                <div class="bg-[#0a1628] rounded-3xl overflow-hidden border border-white/5 p-6 fade-in hover:border-cyan-400/30 transition-all group" style="transition-delay: 0.1s">
+                    <div class="h-48 rounded-2xl mb-6 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=1200" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-4 tracking-tight">Vtuber 切り抜き</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6 font-light">キャラクター性を活かしたポップな編集。モデルの動きに合わせたエフェクト効果を付与し、独自性を高めます。</p>
+                    <h3 class="text-xl font-bold text-white mb-3 tracking-tight">Vtuber 切り抜き</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed font-light">キャラクター性を活かしたポップな編集。モデルの動きに合わせたエフェクトを付与し、独自性を高めます。</p>
+                </div>
+                <!-- Vtuber切り抜きch 動画作成 -->
+                <div class="bg-[#0a1628] rounded-3xl overflow-hidden border border-white/5 p-6 fade-in hover:border-cyan-400/30 transition-all group" style="transition-delay: 0.2s">
+                    <div class="h-48 rounded-2xl mb-6 overflow-hidden relative text-center flex items-center justify-center bg-slate-900/50">
+                        <i class="fas fa-play-circle text-5xl text-cyan-400/30 group-hover:text-cyan-400/60 transition-colors"></i>
+                        <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?q=80&w=1200" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Vtuber切り抜きch動画</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed font-light">切り抜きチャンネル専用の長尺・短尺動画。継続的な投稿を支える効率的かつハイクオリティな制作を行います。</p>
                 </div>
             </div>
         </div>
@@ -261,9 +279,9 @@
                         <li><i class="fas fa-check text-[8px] mr-2 text-cyan-400"></i>BGM・効果音の挿入</li>
                         <li><i class="fas fa-check text-[8px] mr-2 text-cyan-400"></i>1分以内の尺に対応</li>
                     </ul>
-                    <a href="#contact" class="inline-block w-full py-4 border border-white/10 text-white font-bold rounded-xl hover:bg-white hover:text-slate-950 transition-all tracking-[0.2em] text-[10px] uppercase">
-                        Order Single
-                    </a>
+                    <div class="py-4 border border-white/10 text-white font-bold rounded-xl tracking-[0.2em] text-[10px] uppercase text-center cursor-default">
+                        penazul404@gmail.com
+                    </div>
                 </div>
 
                 <!-- まとめパック -->
@@ -288,13 +306,13 @@
                         <li><i class="fas fa-fire text-[8px] mr-2 text-cyan-400"></i>単発より500円お得</li>
                         <li><i class="fas fa-check text-[8px] mr-2 text-cyan-400"></i>同一素材からの複数出し可</li>
                         <li><i class="fas fa-check text-[8px] mr-2 text-cyan-400"></i>定期的な投稿に最適</li>
-                        <li class="pt-2 opacity-60 text-[10px] italic leading-tight">
-                            ※6本ご依頼されても、3本セット割引は一回しか適応されません。
+                        <li class="pt-2 opacity-60 text-[10px] italic leading-tight text-left">
+                            ※6本ご依頼されても, 3本セット割引は一回しか適応されません。
                         </li>
                     </ul>
-                    <a href="#contact" class="inline-block w-full py-4 bg-cyan-400 text-slate-950 font-black rounded-xl hover:bg-white transition-all tracking-[0.2em] text-[10px] uppercase shadow-lg shadow-cyan-400/10">
-                        Get Started
-                    </a>
+                    <div class="py-4 bg-cyan-400 text-slate-950 font-black rounded-xl tracking-[0.2em] text-[10px] uppercase shadow-lg shadow-cyan-400/10 text-center cursor-default">
+                        penazul404@gmail.com
+                    </div>
                 </div>
             </div>
         </div>
@@ -306,7 +324,7 @@
             <div class="flex-shrink-0 fade-in">
                 <div class="avatar-outer">
                     <div class="avatar-container">
-                        <img src="https://cdn.discordapp.com/attachments/1393527616840929332/1470095385077874942/1765381249354.jpg?ex=698a0c84&is=6988bb04&hm=21126820a5e930a0d1d822dfb872d3be32c66d77cb8e8d787571b19ff75f3fc3&" 
+                        <img src="profile.jpg" 
                              alt="代表 ぺん" 
                              class="avatar-image">
                     </div>
@@ -332,27 +350,39 @@
         </div>
     </section>
 
-    <!-- お問い合わせ (Contact with Google Form) -->
-    <section id="contact" class="py-32">
-        <div class="max-w-3xl mx-auto px-6 text-center fade-in">
-            <h2 class="font-serif text-xs uppercase tracking-[0.5em] text-cyan-400 mb-8 font-bold">Connect</h2>
-            <p class="text-4xl text-white mb-10 font-light tracking-widest">プロジェクトを始めましょう</p>
-            
-            <p class="text-slate-400 text-sm mb-12 leading-relaxed">
-                制作のご依頼やご相談は、下記のGoogleフォームよりお気軽にお問い合わせください。<br class="hidden md:block">
-                内容を確認次第、折り返しご連絡させていただきます。
-            </p>
+    <!-- 実績・ポートフォリオ欄 -->
+    <section class="py-24 bg-[#060e1a] border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="mb-16 fade-in text-center lg:text-left">
+                <h2 class="text-xs uppercase tracking-[0.5em] text-cyan-400 mb-4 font-bold tracking-[0.4em]">Experience & Projects</h2>
+                <p class="font-serif text-3xl text-white font-bold tracking-widest">主な実績と活動</p>
+            </div>
 
-            <!-- お問い合わせフォームリンク -->
-            <div class="flex flex-col items-center gap-8">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJOLl0Z8akjgbuAFRSZh8NExo4lsdqf15-4D1jyLue8EOW7A/viewform?usp=sf_link" target="_blank" class="group relative inline-flex items-center justify-center px-16 py-6 font-black text-slate-950 transition-all duration-300 bg-white rounded-full overflow-hidden hover:bg-cyan-400">
-                    <span class="relative z-10 text-sm tracking-[0.4em] uppercase">Open Google Form</span>
-                    <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                </a>
-                
-                <p class="text-[10px] text-slate-600 tracking-[0.2em] uppercase">
-                    ※ リンク先で必要事項をご記入の上、送信してください。
-                </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto lg:mx-0">
+                <!-- 実績カード 1 -->
+                <div class="work-item p-8 rounded-2xl bg-[#0a1628]/50 fade-in group">
+                    <div class="text-cyan-400 text-xs mb-4 font-bold font-serif opacity-70">Experience</div>
+                    <h3 class="text-xl text-white font-bold mb-4">YouTube チャンネル運営</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                        動画編集・サムネイル制作・企画・運営の全工程を一人で完結。<br>
+                        小学6年生から運営開始、数々の企画をやっています。
+                    </p>
+                    <a href="https://youtube.com/@pen2336" target="_blank" class="text-cyan-400 text-xs tracking-widest font-bold uppercase flex items-center gap-2 group-hover:gap-4 transition-all">
+                        View Channel <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- 実績カード 2 -->
+                <div class="work-item p-8 rounded-2xl bg-[#0a1628]/50 fade-in group" style="transition-delay: 0.1s">
+                    <div class="text-cyan-400 text-xs mb-4 font-bold font-serif opacity-70">Portfolio</div>
+                    <h3 class="text-xl text-white font-bold mb-4">公式ポートフォリオ</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                        これまでに手がけた編集作品や、クライアント様への提供事例をまとめた外部ポートフォリオです。制作のクオリティを詳しくご確認いただけます。
+                    </p>
+                    <a href="https://fori.io/peen" target="_blank" class="text-cyan-400 text-xs tracking-widest font-bold uppercase flex items-center gap-2 group-hover:gap-4 transition-all">
+                        Open Portfolio <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -360,7 +390,11 @@
     <!-- フッター -->
     <footer class="py-24 border-t border-white/5 bg-[#040b14]">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <span class="text-2xl font-bold font-serif tracking-[0.5em] text-white mb-8 block uppercase">PEN AZUL</span>
+            <span class="text-2xl font-bold font-serif tracking-[0.5em] text-white mb-4 block uppercase">PEN AZUL</span>
+            <p class="text-slate-400 text-[11px] mb-8 tracking-widest font-medium">
+                詳しいお問い合わせは <span class="text-cyan-400">penazul404@gmail.com</span> にてご連絡ください。
+            </p>
+
             <div class="flex justify-center space-x-12 mb-12 text-[10px] uppercase tracking-[0.3em] text-slate-500">
                 <a href="https://youtube.com/@pen2336" target="_blank" class="hover:text-cyan-400 transition">YouTube</a>
                 <a href="https://x.com/pepen233644" target="_blank" class="hover:text-cyan-400 transition">Twitter (X)</a>
@@ -370,7 +404,6 @@
     </footer>
 
     <script>
-        // スクロール検知によるフェードイン
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
