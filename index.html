@@ -26,6 +26,7 @@
             font-family: 'Shippori Mincho', serif;
         }
 
+        /* ナビゲーションリンク */
         .nav-link {
             position: relative;
             transition: color 0.3s ease;
@@ -44,6 +45,7 @@
             width: 100%;
         }
 
+        /* フェードインアニメーション */
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
@@ -54,18 +56,18 @@
             transform: translateY(0);
         }
 
-        /* アバター装飾 */
+        /* アバター装飾（迫力のサイズ） */
         .avatar-outer {
             position: relative;
-            width: 240px;
-            height: 240px;
+            width: 280px;
+            height: 280px;
         }
         .avatar-container {
             width: 100%;
             height: 100%;
             border-radius: 50%;
-            border: 3px solid var(--pop-cyan);
-            box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+            border: 4px solid var(--pop-cyan);
+            box-shadow: 0 0 40px rgba(0, 255, 255, 0.25);
             overflow: hidden;
             display: flex;
             justify-content: center;
@@ -81,86 +83,75 @@
         .avatar-outer::after {
             content: '';
             position: absolute;
-            inset: -10px;
+            inset: -15px;
             border: 1px solid rgba(0, 255, 255, 0.3);
             border-radius: 50%;
             animation: pulse 3s infinite;
         }
         @keyframes pulse {
             0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.05); opacity: 0.1; }
+            50% { transform: scale(1.08); opacity: 0.1; }
         }
 
-        /* ボタン */
+        /* ボタン装飾 */
         .btn-glow {
             transition: all 0.4s ease;
-            box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
         }
         .btn-glow:hover {
-            box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
-            transform: translateY(-2px);
+            box-shadow: 0 0 35px rgba(0, 255, 255, 0.6);
+            transform: translateY(-3px);
         }
 
-        /* プランカードのホバー */
+        /* 料金カード */
         .price-card {
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
         }
         .price-card:hover {
-            transform: translateY(-10px);
-            background-color: rgba(56, 189, 248, 0.05);
-            border-color: rgba(0, 255, 255, 0.4);
+            transform: translateY(-12px);
+            background-color: rgba(56, 189, 248, 0.08);
+            border-color: rgba(0, 255, 255, 0.5);
         }
         
-        /* バッジ */
         .badge-discount {
             position: absolute;
-            top: -15px;
-            right: 20px;
+            top: -18px;
+            right: 25px;
             background: linear-gradient(45deg, #00ffff, #38bdf8);
             color: #040b14;
-            padding: 4px 15px;
+            padding: 6px 20px;
             border-radius: 99px;
-            font-size: 10px;
+            font-size: 12px;
             font-weight: 900;
-            letter-spacing: 0.1em;
-            box-shadow: 0 4px 15px rgba(0, 255, 255, 0.4);
+            letter-spacing: 0.15em;
+            box-shadow: 0 6px 20px rgba(0, 255, 255, 0.4);
         }
 
-        /* 実績カード */
-        .work-item {
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
-        }
-        .work-item:hover {
-            border-color: var(--pop-cyan);
-            background: rgba(56, 189, 248, 0.03);
-        }
-
-        /* お問い合わせセクションの装飾 */
+        /* お問い合わせボックス */
         .contact-box {
-            background: linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(4, 11, 20, 1) 100%);
-            border: 1px solid rgba(56, 189, 248, 0.2);
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.15) 0%, rgba(4, 11, 20, 1) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.3);
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased text-lg">
 
     <!-- ナビゲーション -->
-    <nav class="fixed top-0 w-full z-50 bg-[#040b14]/80 backdrop-blur-xl border-b border-white/5">
+    <nav class="fixed top-0 w-full z-50 bg-[#040b14]/90 backdrop-blur-2xl border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="flex justify-between h-20 items-center">
+            <div class="flex justify-between h-24 items-center">
                 <div class="flex-shrink-0">
-                    <span class="text-2xl font-bold font-serif tracking-[0.3em] text-white">PEN AZUL</span>
+                    <span class="text-3xl font-bold font-serif tracking-[0.3em] text-white">PEN AZUL</span>
                 </div>
-                <div class="hidden md:flex space-x-10 items-center text-[10px] uppercase tracking-[0.3em] font-bold">
+                <div class="hidden md:flex space-x-12 items-center text-xs uppercase tracking-[0.4em] font-bold">
                     <a href="#services" class="nav-link">Services</a>
                     <a href="#works" class="nav-link">Works</a>
                     <a href="#pricing" class="nav-link">Pricing</a>
                     <a href="#about" class="nav-link">About</a>
-                    <a href="#contact" class="px-4 py-2 border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400 hover:text-black transition-all">Contact</a>
+                    <a href="#contact" class="px-6 py-3 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all">Contact</a>
                 </div>
-                <div class="md:hidden text-white text-xl">
+                <div class="md:hidden text-white text-2xl">
                     <i class="fas fa-bars"></i>
                 </div>
             </div>
@@ -170,18 +161,17 @@
     <!-- ヒーローセクション -->
     <header class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop" alt="Hero Background" class="w-full h-full object-cover opacity-20">
-            <div class="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-transparent to-[#040b14]"></div>
+            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop" alt="Hero Background" class="w-full h-full object-cover opacity-25">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-transparent to-[#040b14]"></div>
         </div>
-        
         <div class="relative z-10 text-center px-6 fade-in">
-            <p class="text-cyan-400 text-xs tracking-[0.5em] mb-6 font-bold uppercase">Creative Video Production</p>
-            <h1 class="font-serif text-5xl md:text-8xl mb-10 text-white font-bold leading-tight tracking-wider">
+            <p class="text-cyan-400 text-sm tracking-[0.6em] mb-8 font-bold uppercase">Creative Video Production</p>
+            <h1 class="font-serif text-6xl md:text-9xl mb-12 text-white font-bold leading-tight tracking-wider">
                 切り抜きで、<br>
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">配信を広げる。</span>
             </h1>
-            <div class="flex flex-col sm:flex-row justify-center gap-6">
-                <a href="#works" class="btn-glow inline-block px-12 py-4 bg-blue-500 text-slate-950 font-black tracking-widest rounded-full hover:bg-white transition-colors">
+            <div class="flex flex-col sm:flex-row justify-center gap-8">
+                <a href="#works" class="btn-glow inline-block px-16 py-5 bg-blue-500 text-slate-950 text-xl font-black tracking-widest rounded-full hover:bg-white transition-colors">
                     EXPLORE WORKS
                 </a>
             </div>
@@ -189,33 +179,22 @@
     </header>
 
     <!-- サービス -->
-    <section id="services" class="py-32 relative">
+    <section id="services" class="py-40 relative">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="grid grid-cols-1 lg:flex items-center gap-20">
+            <div class="grid grid-cols-1 lg:flex items-center gap-24">
                 <div class="w-full lg:w-1/2 fade-in">
-                    <span class="text-cyan-400 text-xs font-bold tracking-[0.4em] mb-4 block uppercase">Our Service</span>
-                    <h2 class="font-serif text-4xl md:text-6xl text-white mb-8 leading-tight">
+                    <span class="text-cyan-400 text-sm font-bold tracking-[0.5em] mb-6 block uppercase">Our Service</span>
+                    <h2 class="font-serif text-5xl md:text-7xl text-white mb-10 leading-tight">
                         視聴者の心を掴む<br>
                         <span class="text-blue-400">「一瞬」を面白く</span>
                     </h2>
-                    <p class="text-slate-400 text-lg leading-relaxed mb-10 font-light">
+                    <p class="text-slate-400 text-xl leading-relaxed mb-12 font-light">
                         ただ短くするだけではありません。配信者の魅力、リスナーの熱狂、そして「その瞬間の空気」を凝縮し、拡散を生む映像へと昇華させます。
                     </p>
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-4 group">
-                            <div class="w-8 h-[1px] bg-cyan-400 group-hover:w-12 transition-all"></div>
-                            <span class="text-sm tracking-widest text-slate-300 uppercase">High Quality Captions</span>
-                        </div>
-                        <div class="flex items-center gap-4 group">
-                            <div class="w-8 h-[1px] bg-cyan-400 group-hover:w-12 transition-all"></div>
-                            <span class="text-sm tracking-widest text-slate-300 uppercase">Retention Strategy</span>
-                        </div>
-                    </div>
                 </div>
                 <div class="w-full lg:w-1/2 fade-in" style="transition-delay: 0.2s">
-                    <div class="relative rounded-2xl overflow-hidden border border-white/10 group">
+                    <div class="relative rounded-3xl overflow-hidden border border-white/10 group shadow-2xl">
                         <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=2070&auto=format&fit=crop" alt="Video Editing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#040b14] via-transparent to-transparent opacity-60"></div>
                     </div>
                 </div>
             </div>
@@ -223,101 +202,65 @@
     </section>
 
     <!-- 作成可能例 (Portfolio) -->
-    <section id="works" class="py-32 bg-[#060e1a]">
+    <section id="works" class="py-40 bg-[#060e1a]">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="text-center mb-24 fade-in">
-                <h2 class="text-xs uppercase tracking-[0.5em] text-cyan-400 mb-4 font-bold">Portfolio</h2>
-                <p class="font-serif text-4xl md:text-5xl text-white font-bold tracking-widest">作成可能例</p>
+            <div class="text-center mb-32 fade-in">
+                <h2 class="text-sm uppercase tracking-[0.6em] text-cyan-400 mb-6 font-bold">Portfolio</h2>
+                <p class="font-serif text-5xl md:text-6xl text-white font-bold tracking-widest">作成可能例</p>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Streamer 切り抜き -->
-                <div class="bg-[#0a1628] rounded-3xl overflow-hidden border border-white/5 p-6 fade-in hover:border-cyan-400/30 transition-all group">
-                    <div class="h-48 rounded-2xl mb-6 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3 tracking-tight">Streamer 切り抜き</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed font-light">ゲーム実況や雑談配信のハイライト。エンタメ性を最大化したテロップ演出で新規ファンを獲得します。</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="bg-[#0a1628] rounded-[2rem] overflow-hidden border border-white/5 p-10 fade-in hover:border-cyan-400/30 transition-all">
+                    <h3 class="text-2xl font-bold text-white mb-5">Streamer 切り抜き</h3>
+                    <p class="text-slate-400 text-base leading-relaxed">ハイライト演出で新規ファンを獲得。エンタメ性を最大化したテロップ編集を行います。</p>
                 </div>
-                <!-- Vtuber 切り抜き -->
-                <div class="bg-[#0a1628] rounded-3xl overflow-hidden border border-white/5 p-6 fade-in hover:border-cyan-400/30 transition-all group" style="transition-delay: 0.1s">
-                    <div class="h-48 rounded-2xl mb-6 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=1200" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3 tracking-tight">Vtuber 切り抜き</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed font-light">キャラクター性を活かしたポップな編集。モデルの動きに合わせたエフェクトを付与し、独自性を高めます。</p>
+                <div class="bg-[#0a1628] rounded-[2rem] overflow-hidden border border-white/5 p-10 fade-in hover:border-cyan-400/30 transition-all">
+                    <h3 class="text-2xl font-bold text-white mb-5">Vtuber 切り抜き</h3>
+                    <p class="text-slate-400 text-base leading-relaxed">キャラクター性を活かしたポップな編集。モデルの動きに合わせたエフェクトを付与。</p>
                 </div>
-                <!-- Vtuber切り抜きch 動画作成 -->
-                <div class="bg-[#0a1628] rounded-3xl overflow-hidden border border-white/5 p-6 fade-in hover:border-cyan-400/30 transition-all group" style="transition-delay: 0.2s">
-                    <div class="h-48 rounded-2xl mb-6 overflow-hidden relative text-center flex items-center justify-center bg-slate-900/50">
-                        <i class="fas fa-play-circle text-5xl text-cyan-400/30 group-hover:text-cyan-400/60 transition-colors"></i>
-                        <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?q=80&w=1200" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Vtuber切り抜きch動画</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed font-light">切り抜きチャンネル専用の長尺・短尺動画。継続的な投稿を支える効率的かつハイクオリティな制作を行います。</p>
+                <div class="bg-[#0a1628] rounded-[2rem] overflow-hidden border border-white/5 p-10 fade-in hover:border-cyan-400/30 transition-all">
+                    <h3 class="text-2xl font-bold text-white mb-5 text-cyan-300">Vtuber切り抜きch動画</h3>
+                    <p class="text-slate-400 text-base leading-relaxed">継続投稿を支える効率的・高品質制作。チャンネルの成長を第一に考えます。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 料金表 (Pricing) -->
-    <section id="pricing" class="py-32">
+    <!-- 料金プラン (Pricing) -->
+    <section id="pricing" class="py-40">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="text-center mb-20 fade-in">
-                <h2 class="text-xs uppercase tracking-[0.5em] text-cyan-400 mb-4 font-bold">Pricing</h2>
-                <p class="font-serif text-4xl md:text-5xl text-white font-bold tracking-widest">料金表</p>
+            <div class="text-center mb-24 fade-in">
+                <h2 class="text-sm uppercase tracking-[0.6em] text-cyan-400 mb-6 font-bold">Pricing</h2>
+                <p class="font-serif text-5xl md:text-6xl text-white font-bold tracking-widest">料金表</p>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
                 <!-- 単発プラン -->
-                <div class="price-card bg-[#0a1628] rounded-3xl border border-white/5 p-10 text-center fade-in">
-                    <div class="mb-6 inline-block p-4 bg-slate-500/10 rounded-2xl">
-                        <i class="fas fa-video text-3xl text-slate-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-6 tracking-widest uppercase">Single Plan</h3>
-                    <p class="text-cyan-400 text-xs font-bold mb-2">Short / 縦型動画作成</p>
-                    <div class="flex items-baseline justify-center gap-2 mb-8">
-                        <span class="text-slate-500 text-xs">1本</span>
-                        <span class="text-4xl font-bold text-white">¥1,500</span>
-                        <span class="text-slate-500 text-xs">〜</span>
-                    </div>
-                    <ul class="text-slate-400 text-xs leading-relaxed space-y-3 mb-10 text-left list-none pl-4 border-l border-white/10">
-                        <li><i class="fas fa-check text-[8px] mr-2 text-cyan-400"></i>フルテロップ対応</li>
-                        <li><i class="fas fa-check text-[8px] mr-2 text-cyan-400"></i>BGM・効果音の挿入</li>
-                        <li><i class="fas fa-check text-[8px] mr-2 text-cyan-400"></i>1分以内の尺に対応</li>
+                <div class="price-card bg-[#0a1628] rounded-[2.5rem] border border-white/10 p-14 text-center fade-in">
+                    <h3 class="text-2xl font-bold text-white mb-8 uppercase tracking-widest">Single Plan</h3>
+                    <p class="text-cyan-400 text-sm font-bold mb-4 uppercase">Short動画作成</p>
+                    <div class="text-6xl font-bold text-white mb-10">¥3,000 <span class="text-xl">〜</span></div>
+                    <ul class="text-slate-400 text-sm mb-12 space-y-4 text-left border-l-2 border-cyan-400/20 pl-6 mx-auto w-fit">
+                        <li><i class="fas fa-check text-cyan-400 mr-2"></i>フルテロップ対応</li>
+                        <li><i class="fas fa-check text-cyan-400 mr-2"></i>BGM・SE挿入</li>
                     </ul>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJOLl0Z8akjgbuAFRSZh8NExo4lsdqf15-4D1jyLue8EOW7A/viewform?usp=dialog" target="_blank" class="inline-block w-full py-4 border border-white/10 text-white font-bold rounded-xl hover:bg-white hover:text-slate-950 transition-all tracking-[0.2em] text-[10px] uppercase text-center">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJOLl0Z8akjgbuAFRSZh8NExo4lsdqf15-4D1jyLue8EOW7A/viewform?usp=dialog" target="_blank" class="inline-block w-full py-5 border border-white/20 text-white text-lg font-bold rounded-2xl hover:bg-white hover:text-slate-950 transition-all uppercase tracking-widest text-center">
                         依頼を相談する
                     </a>
                 </div>
-
-                <!-- まとめパック -->
-                <div class="price-card bg-[#0a1628] rounded-3xl border border-cyan-400/20 p-10 text-center fade-in" style="transition-delay: 0.1s">
+                <!-- パックプラン -->
+                <div class="price-card bg-[#0a1628] rounded-[2.5rem] border border-cyan-400/30 p-14 text-center fade-in">
                     <div class="badge-discount uppercase font-black">お得な制作パック</div>
-                    <div class="mb-6 inline-block p-4 bg-cyan-400/10 rounded-2xl">
-                        <i class="fas fa-layer-group text-3xl text-cyan-400"></i>
+                    <h3 class="text-2xl font-bold text-white mb-8 uppercase tracking-widest">Bundle Pack</h3>
+                    <p class="text-cyan-400 text-sm font-bold mb-4 uppercase">まとめてお得な3本セット</p>
+                    <div class="flex flex-col items-center mb-10">
+                        <span class="text-slate-500 text-xl line-through mb-2">通常 ¥9,000</span>
+                        <div class="text-7xl font-bold text-white">¥8,000 <span class="text-xl">〜</span></div>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-6 tracking-widest uppercase">Bundle Pack</h3>
-                    <p class="text-cyan-400 text-xs font-bold mb-2">まとめてお得な3本セット</p>
-                    <div class="flex flex-col items-center justify-center mb-8">
-                        <div class="flex items-center gap-2 text-slate-500 line-through text-xs mb-1">
-                            <span>通常 ¥4,500</span>
-                        </div>
-                        <div class="flex items-baseline gap-2">
-                            <span class="text-slate-500 text-xs font-bold">3本で</span>
-                            <span class="text-5xl font-bold text-white tracking-tighter">¥4,000</span>
-                            <span class="text-slate-500 text-xs font-bold">〜</span>
-                        </div>
-                    </div>
-                    <ul class="text-slate-400 text-xs leading-relaxed space-y-3 mb-10 text-left list-none pl-4 border-l border-cyan-400/30">
-                        <li><i class="fas fa-fire text-[8px] mr-2 text-cyan-400"></i>単発より500円お得</li>
-                        <li><i class="fas fa-check text-[8px] mr-2 text-cyan-400"></i>同一素材からの複数出し可</li>
-                        <li><i class="fas fa-check text-[8px] mr-2 text-cyan-400"></i>定期的な投稿に最適</li>
-                        <li class="pt-2 opacity-60 text-[10px] italic leading-tight text-left">
-                            ※6本ご依頼されても, 3本セット割引は一回しか適応されません。
-                        </li>
+                    <ul class="text-slate-400 text-sm mb-12 space-y-4 text-left border-l-2 border-cyan-400/40 pl-6 mx-auto w-fit">
+                        <li><i class="fas fa-fire text-cyan-400 mr-2"></i>単発より1,000円お得</li>
+                        <li><i class="fas fa-check text-cyan-400 mr-2"></i>同一素材からの複数出し可</li>
+                        <li class="pt-2 opacity-60 text-xs italic">※6本依頼でも割引は1回のみ適応</li>
                     </ul>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJOLl0Z8akjgbuAFRSZh8NExo4lsdqf15-4D1jyLue8EOW7A/viewform?usp=dialog" target="_blank" class="inline-block w-full py-4 bg-cyan-400 text-slate-950 font-black rounded-xl hover:bg-white transition-all tracking-[0.2em] text-[10px] uppercase shadow-lg shadow-cyan-400/10 text-center">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJOLl0Z8akjgbuAFRSZh8NExo4lsdqf15-4D1jyLue8EOW7A/viewform?usp=dialog" target="_blank" class="inline-block w-full py-5 bg-cyan-400 text-slate-950 text-lg font-black rounded-2xl hover:bg-white transition-all uppercase tracking-widest text-center shadow-xl shadow-cyan-400/20">
                         パックで依頼する
                     </a>
                 </div>
@@ -326,31 +269,22 @@
     </section>
 
     <!-- 代表紹介 (About) -->
-    <section id="about" class="py-32 bg-[#040b14]">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-16 lg:gap-32">
+    <section id="about" class="py-40 bg-[#040b14]">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-24 lg:gap-32">
             <div class="flex-shrink-0 fade-in">
-                <div class="avatar-outer">
-                    <div class="avatar-container">
-                        <img src="profile.jpg" 
-                             alt="代表 ぺん" 
-                             class="avatar-image">
-                    </div>
-                </div>
+                <div class="avatar-outer"><div class="avatar-container"><img src="profile.jpg" alt="代表 ぺん" class="avatar-image"></div></div>
             </div>
-            <div class="flex-1 text-center lg:text-left fade-in" style="transition-delay: 0.2s">
-                <span class="text-cyan-400 text-xs font-bold tracking-[0.5em] mb-4 block uppercase font-serif">代表</span>
-                <h2 class="font-serif text-6xl text-white mb-10 font-bold tracking-[0.05em]">ぺん🐧</h2>
-                <p class="text-slate-400 text-xl font-light leading-relaxed mb-10 max-w-2xl">
-                    小学3年生から動画編集に触れ、独学で技術を磨き続けてきました。自らのYouTube発信経験を活かし、クリエイター目線で「本当に伸びる映像」を追求します。
+            <div class="flex-1 text-center lg:text-left fade-in">
+                <h2 class="font-serif text-7xl md:text-8xl text-white mb-12 font-bold tracking-[0.05em]">ぺん🐧</h2>
+                <p class="text-slate-400 text-2xl font-light leading-relaxed mb-14 max-w-3xl">
+                    小学3年生から動画編集のキャリアをスタート。自らもYouTube発信を行い、試行錯誤の末に辿り着いた「視聴者を飽きさせない編集技術」で、あなたの活動をサポートします。
                 </p>
-                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-                    <a href="https://youtube.com/@pen2336" target="_blank" class="flex items-center justify-center gap-4 bg-[#FF0000] text-white px-8 py-3 rounded-full font-bold hover:opacity-80 transition-opacity">
-                        <i class="fab fa-youtube text-xl"></i>
-                        YouTube
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-6">
+                    <a href="https://youtube.com/@pen2336" target="_blank" class="flex items-center justify-center gap-5 bg-[#FF0000] text-white px-10 py-4 rounded-full text-xl font-bold hover:opacity-80 transition-opacity">
+                        <i class="fab fa-youtube"></i> YouTube
                     </a>
-                    <a href="https://x.com/pepen233644" target="_blank" class="flex items-center justify-center gap-4 bg-white text-slate-950 px-8 py-3 rounded-full font-bold hover:bg-cyan-400 transition-colors">
-                        <i class="fab fa-x-twitter text-xl"></i>
-                        X (@pepen233644)
+                    <a href="https://x.com/pepen233644" target="_blank" class="flex items-center justify-center gap-5 bg-white text-slate-950 px-10 py-4 rounded-full text-xl font-bold hover:bg-cyan-400 transition-colors">
+                        <i class="fab fa-x-twitter"></i> X (@pepen233644)
                     </a>
                 </div>
             </div>
@@ -358,35 +292,24 @@
     </section>
 
     <!-- 実績・ポートフォリオ欄 -->
-    <section class="py-24 bg-[#060e1a] border-t border-white/5">
+    <section class="py-32 bg-[#060e1a] border-t border-white/5">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="mb-16 fade-in text-center lg:text-left">
-                <h2 class="text-xs uppercase tracking-[0.5em] text-cyan-400 mb-4 font-bold tracking-[0.4em]">Experience & Projects</h2>
-                <p class="font-serif text-3xl text-white font-bold tracking-widest">主な実績と活動</p>
+            <div class="mb-24 fade-in text-center lg:text-left">
+                <h2 class="text-sm uppercase tracking-[0.6em] text-cyan-400 mb-6 font-bold">Experience & Projects</h2>
+                <p class="font-serif text-4xl md:text-5xl text-white font-bold tracking-widest">主な実績と活動</p>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto lg:mx-0">
-                <!-- 実績カード 1 -->
-                <div class="work-item p-8 rounded-2xl bg-[#0a1628]/50 fade-in group">
-                    <div class="text-cyan-400 text-xs mb-4 font-bold font-serif opacity-70">Experience</div>
-                    <h3 class="text-xl text-white font-bold mb-4">YouTube チャンネル運営</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-8">
-                        動画編集・サムネイル制作・企画・運営の全工程を一人で完結。<br>
-                        小学6年生から運営開始、数々の企画をやっています。
-                    </p>
-                    <a href="https://youtube.com/@pen2336" target="_blank" class="text-cyan-400 text-xs tracking-widest font-bold uppercase flex items-center gap-2 group-hover:gap-4 transition-all">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto lg:mx-0">
+                <div class="p-12 rounded-[2.5rem] bg-[#0a1628]/60 border border-white/5 fade-in hover:border-cyan-400/30 transition-all group">
+                    <h3 class="text-2xl text-white font-bold mb-6">YouTube チャンネル運営</h3>
+                    <p class="text-slate-400 text-lg leading-relaxed mb-10">動画編集・サムネイル・企画の全工程を完結。小学6年生から継続運営中です。</p>
+                    <a href="https://youtube.com/@pen2336" target="_blank" class="text-cyan-400 text-sm font-bold uppercase tracking-widest flex items-center gap-3 group-hover:gap-5 transition-all">
                         View Channel <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
-
-                <!-- 実績カード 2 -->
-                <div class="work-item p-8 rounded-2xl bg-[#0a1628]/50 fade-in group" style="transition-delay: 0.1s">
-                    <div class="text-cyan-400 text-xs mb-4 font-bold font-serif opacity-70">Portfolio</div>
-                    <h3 class="text-xl text-white font-bold mb-4">公式ポートフォリオ</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-8">
-                        これまでに手がけた編集作品です。是非クオリティーをお確かめください。
-                    </p>
-                    <a href="https://fori.io/peen" target="_blank" class="text-cyan-400 text-xs tracking-widest font-bold uppercase flex items-center gap-2 group-hover:gap-4 transition-all">
+                <div class="p-12 rounded-[2.5rem] bg-[#0a1628]/60 border border-white/5 fade-in hover:border-cyan-400/30 transition-all group">
+                    <h3 class="text-2xl text-white font-bold mb-6">公式ポートフォリオ</h3>
+                    <p class="text-slate-400 text-lg leading-relaxed mb-10">これまでに手がけた編集作品をまとめた外部サイトです。品質を詳しくご確認いただけます。</p>
+                    <a href="https://fori.io/peen" target="_blank" class="text-cyan-400 text-sm font-bold uppercase tracking-widest flex items-center gap-3 group-hover:gap-5 transition-all">
                         Open Portfolio <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -394,60 +317,43 @@
         </div>
     </section>
 
-    <!-- 依頼セクション (New Contact Section) -->
-    <section id="contact" class="py-32 bg-[#040b14]">
-        <div class="max-w-4xl mx-auto px-6 fade-in">
-            <div class="contact-box rounded-[2rem] p-12 text-center relative overflow-hidden">
-                <!-- 装飾用アイコン -->
-                <div class="absolute -top-10 -right-10 text-cyan-400/10 text-9xl">
-                    <i class="fas fa-paper-plane"></i>
-                </div>
-                
-                <h2 class="text-cyan-400 text-xs font-bold tracking-[0.5em] mb-6 block uppercase font-serif">Contact</h2>
-                <p class="font-serif text-4xl md:text-5xl text-white font-bold tracking-widest mb-8">依頼はこちらから</p>
-                <p class="text-slate-400 text-lg mb-12 font-light leading-relaxed">
-                    映像制作のご相談、お見積り、ご質問など<br class="hidden md:block">
-                    以下のGoogleフォームよりお気軽にお送りください。
+    <!-- 依頼はこちらから欄 -->
+    <section id="contact" class="py-40 bg-[#040b14]">
+        <div class="max-w-5xl mx-auto px-6 fade-in">
+            <div class="contact-box rounded-[3.5rem] p-16 md:p-24 text-center relative overflow-hidden shadow-2xl">
+                <div class="absolute -top-16 -right-16 text-cyan-400/10 text-[15rem]"><i class="fas fa-paper-plane"></i></div>
+                <h2 class="text-cyan-400 text-sm font-bold tracking-[0.7em] mb-8 uppercase font-serif">Contact</h2>
+                <p class="font-serif text-5xl md:text-7xl text-white font-bold tracking-widest mb-10 leading-tight">依頼はこちらから</p>
+                <p class="text-slate-400 text-2xl mb-16 font-light leading-relaxed">
+                    映像制作のご相談、お見積り、ご質問などは<br>
+                    以下の専用フォームよりお気軽にご連絡ください。
                 </p>
-                
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJOLl0Z8akjgbuAFRSZh8NExo4lsdqf15-4D1jyLue8EOW7A/viewform?usp=dialog" target="_blank" 
-                   class="btn-glow inline-flex items-center gap-4 px-16 py-6 bg-cyan-400 text-slate-950 font-black tracking-[0.2em] rounded-full hover:bg-white transition-all transform active:scale-95">
+                   class="btn-glow inline-flex items-center gap-6 px-20 py-7 bg-cyan-400 text-slate-950 text-2xl font-black tracking-[0.25em] rounded-full hover:bg-white transition-all transform active:scale-95 text-center">
                     <i class="fas fa-edit"></i>
-                    GOOGLE FORM を開く
+                    GOOGLE FORM
                 </a>
-                
-                <p class="mt-10 text-[10px] text-slate-500 tracking-[0.2em] uppercase">
-                    Usually respond within 24-48 hours.
-                </p>
             </div>
         </div>
     </section>
 
     <!-- フッター -->
-    <footer class="py-24 border-t border-white/5 bg-[#040b14]">
+    <footer class="py-32 border-t border-white/5 bg-[#040b14]">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <span class="text-2xl font-bold font-serif tracking-[0.5em] text-white mb-4 block uppercase">PEN AZUL</span>
-            <p class="text-slate-400 text-[11px] mb-8 tracking-widest font-medium">
-                詳しいお問い合わせは <span class="text-cyan-400">penazul404@gmail.com</span> にてご連絡ください。
+            <span class="text-3xl font-bold font-serif tracking-[0.6em] text-white mb-6 block uppercase">PEN AZUL</span>
+            <p class="text-slate-400 text-sm mb-12 tracking-widest">
+                Direct Contact: <span class="text-cyan-400 font-bold">penazul404@gmail.com</span>
             </p>
-
-            <div class="flex justify-center space-x-12 mb-12 text-[10px] uppercase tracking-[0.3em] text-slate-500">
-                <a href="https://youtube.com/@pen2336" target="_blank" class="hover:text-cyan-400 transition">YouTube</a>
-                <a href="https://x.com/pepen233644" target="_blank" class="hover:text-cyan-400 transition">Twitter (X)</a>
-            </div>
-            <p class="text-[9px] text-slate-600 tracking-[0.4em] uppercase font-bold">&copy; 2026 PEN AZUL Studio. All rights reserved.</p>
+            <p class="text-[10px] text-slate-600 tracking-[0.5em] uppercase font-black">&copy; 2026 PEN AZUL STUDIO. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
 
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('visible');
             });
         }, { threshold: 0.1 });
-
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     </script>
 </body>
